@@ -3,6 +3,5 @@
 --
 -- See the kickstart.nvim README for more information
 local plugins = {
-  {"iagorrr/noctishc.nvim"}
 }
 
