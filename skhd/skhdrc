@@ -1,14 +1,14 @@
-# foucs window
-shift + alt - h : yabai -m window --focus west
-shift + alt - j : yabai -m window --focus south
-shift + alt - k : yabai -m window --focus north
-shift + alt - l : yabai -m window --focus east
+# focus window
+shift + alt - 0x21 : yabai -m window --focus west
+shift + alt - o : yabai -m window --focus south
+shift + alt - p : yabai -m window --focus north
+shift + alt - 0x1E : yabai -m window --focus east
 
 # move managed window
-shift + alt + ctrl - h : yabai -m window --warp west
-shift + alt + ctrl - j : yabai -m window --warp south
-shift + alt + ctrl - k : yabai -m window --warp north
-shift + alt + ctrl - l : yabai -m window --warp east
+shift + alt + ctrl - 0x21 : yabai -m window --warp west
+shift + alt + ctrl - o : yabai -m window --warp south
+shift + alt + ctrl - p : yabai -m window --warp north
+shift + alt + ctrl - 0x1E : yabai -m window --warp east
 
 # rotate tree
 shift + alt - r : yabai -m space --rotate 90
@@ -26,7 +26,7 @@ shift + alt - y : yabai -m window --toggle float;\
           yabai -m window --grid 4:4:1:1:2:2
 
 # toggle window split type
-shift + alt - e : yabai -m window --toggle split
+shift + alt - l : yabai -m window --toggle split
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
