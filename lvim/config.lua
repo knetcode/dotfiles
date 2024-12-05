@@ -14,7 +14,32 @@ lvim.plugins = {
   "scottmckendry/cyberdream.nvim",
   "iagorrr/noctishc.nvim",
   "kartikp10/noctis.nvim",
-  "rktjmp/lush.nvim"
+  "rktjmp/lush.nvim",
+  {
+    'pineapplegiant/spaceduck',
+    branch = 'main'
+  },
 }
 
-lvim.colorscheme = "cyberdream"
+-- lvim.colorscheme = "cyberdream"
+lvim.colorscheme = "noctishc"
+
+vim.api.nvim_create_augroup("NoctisCustom", { clear = true })
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = "NoctisCustom",
+  pattern = "noctishc",
+  callback = function()
+    -- Modify specific highlight groups
+    vim.api.nvim_set_hl(0, '@tag.builtin.tsx', { fg = '#FF7039' })
+    vim.api.nvim_set_hl(0, '@keyword.function.tsx', { bold = false, fg = "#FF669C" })
+    vim.api.nvim_set_hl(0, '@tag.attribute.tsx', { italic = false, fg = '#E6AC00' })
+    vim.api.nvim_set_hl(0, '@tag.tsx', { italic = false, fg = '#00A0FF' })
+    vim.api.nvim_set_hl(0, '@type.tsx', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@lsp.type.type.typescriptreact', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@lsp.type.interface.typescriptreact', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@type.builtin.tsx', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@constant.builtin.tsx', { bold = false, fg = '#A000FF' })
+    vim.api.nvim_set_hl(0, '@comment.tsx', { fg = '#888888' })
+    vim.api.nvim_set_hl(0, '@comment.documentation.tsx', { fg = '#888888' })
+  end
+})
