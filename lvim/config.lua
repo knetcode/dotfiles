@@ -30,16 +30,44 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "noctishc",
   callback = function()
     -- Modify specific highlight groups
+    -- HTML
     vim.api.nvim_set_hl(0, '@tag.builtin.tsx', { fg = '#FF7039' })
+
+    -- Keywords
     vim.api.nvim_set_hl(0, '@keyword.function.tsx', { bold = false, fg = "#FF669C" })
+    vim.api.nvim_set_hl(0, '@keyword.function.typescript', { bold = false, fg = "#FF669C" })
+    vim.api.nvim_set_hl(0, '@keyword.import.typescript', { bold = false, fg = "#FF669C" })
+    vim.api.nvim_set_hl(0, '@keyword.coroutine.typescript', { bold = false, fg = "#FF669C" })
+    vim.api.nvim_set_hl(0, '@keyword.typescript', { bold = false, fg = "#FF669C" })
+
+    -- Attributes
     vim.api.nvim_set_hl(0, '@tag.attribute.tsx', { italic = false, fg = '#E6AC00' })
+    vim.api.nvim_set_hl(0, '@lsp.type.variable.typescript', { italic = false, fg = '#E6AC00' })
+
+    -- React Components
     vim.api.nvim_set_hl(0, '@tag.tsx', { italic = false, fg = '#00A0FF' })
+
+    -- Types
     vim.api.nvim_set_hl(0, '@type.tsx', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@lsp.type.type.typescript', { italic = false, fg = '#EB84EB' })
     vim.api.nvim_set_hl(0, '@lsp.type.type.typescriptreact', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@type.builtin.typescript', { italic = false, fg = '#EB84EB' })
     vim.api.nvim_set_hl(0, '@lsp.type.interface.typescriptreact', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@lsp.type.interface.typescript', { italic = false, fg = '#EB84EB' })
     vim.api.nvim_set_hl(0, '@type.builtin.tsx', { italic = false, fg = '#EB84EB' })
+    vim.api.nvim_set_hl(0, '@type.typescript', { italic = false, fg = '#EB84EB' })
+
+    -- Bools, nulls, undefined
     vim.api.nvim_set_hl(0, '@constant.builtin.tsx', { bold = false, fg = '#A000FF' })
+
+    -- Comments
     vim.api.nvim_set_hl(0, '@comment.tsx', { fg = '#888888' })
     vim.api.nvim_set_hl(0, '@comment.documentation.tsx', { fg = '#888888' })
+    vim.api.nvim_set_hl(0, '@comment.documentation.typescript', { fg = '#888888' })
+    vim.api.nvim_set_hl(0, '@comment.typescript', { fg = '#888888' })
+
+    -- Classes
+    vim.api.nvim_set_hl(0, '@lsp.type.class.typescript', { italic = false, fg = '#00A0FF' })
+    vim.api.nvim_set_hl(0, '@constructor.typescript', { italic = false, fg = '#00A0FF' })
   end
 })

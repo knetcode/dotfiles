@@ -1,3 +1,6 @@
 [filesystem "Eclipse Adoptium|21.0.4|/dev/disk3s1"]
 	timestampResolution = 2000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[filesystem "Eclipse Adoptium|21.0.5|/dev/disk3s1"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
