@@ -21,6 +21,8 @@ lvim.plugins = {
   },
 }
 
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
+
 -- lvim.colorscheme = "cyberdream"
 lvim.colorscheme = "noctishc"
 
